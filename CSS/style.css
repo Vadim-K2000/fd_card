@@ -1,2 +1,76 @@
 @import "reset.css";
 
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
+
+    border-radius: 5px;
+    padding: 30px;
+    margin: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+    overflow: hidden;
+}
+
+.fontCard {
+    font-size: 15px;
+}
+
+.money {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0.5em 0 1em 0;
+}
+
+.svgBox {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.card:nth-child(3n+1) {
+    background: rgb(255, 188, 150);
+    background: linear-gradient(90deg, rgba(255, 188, 150, 1) 0%, rgba(255, 128, 150, 1) 100%);
+}
+
+.card:nth-child(3n+2) {
+    background: rgb(134, 198, 245);
+    background: linear-gradient(90deg, rgba(134, 198, 245, 1) 0%, rgba(10, 137, 224, 1) 100%);
+}
+
+.card:nth-child(3n+3) {
+    background: rgb(0, 208, 184);
+    background: linear-gradient(90deg, rgba(0, 208, 184, 1) 0%, rgba(0, 208, 184, 1) 100%);
+}
+
+.card::after {
+    position: absolute;
+    content: '';
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: -10%;
+    right: -20%;
+    background-color: rgba(250, 250, 250, 0.3);
+}
+
+.card::before {
+    position: absolute;
+    content: '';
+    bottom: -55%;
+    right: -10%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(250, 250, 250, 0.3);
+}
